@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2281B76E-5218-4DB1-91A1-DFE56DDCCE7C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UT4Cheat</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;UT4CHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;UT4CHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;UT4CHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;UT4CHEAT_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="detours\detour.cpp" />
+    <ClCompile Include="detours\exception_detour.cpp" />
+    <ClCompile Include="detours\game\draw_hud_detour.cpp" />
+    <ClCompile Include="detours\game\tick_detour.cpp" />
+    <ClCompile Include="detours\hwbp_detour.cpp" />
+    <ClCompile Include="detours\trampoline_detour.cpp" />
+    <ClCompile Include="detours\vmt_detour.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="manager.cpp" />
+    <ClCompile Include="modules\aimbot.cpp" />
+    <ClCompile Include="modules\esp.cpp" />
+    <ClCompile Include="modules\module.cpp" />
+    <ClCompile Include="SDK\UT4_AIModule_functions.cpp" />
+    <ClCompile Include="SDK\UT4_AirRocketReward_functions.cpp" />
+    <ClCompile Include="SDK\UT4_AnimGraphRuntime_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ArchVisCharacter_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ArenaMutatorMenu_functions.cpp" />
+    <ClCompile Include="SDK\UT4_AwesomComboReward_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BaseCharacterBloodExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BaseUTCharacter_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BaseUTVoice_functions.cpp" />
+    <ClCompile Include="SDK\UT4_base_1p_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Base_3p_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Basic.cpp" />
+    <ClCompile Include="SDK\UT4_BioRifle_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BlueprintContext_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BlueTeleportEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_FlagSplineCreator_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_FlakCannon_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Flak_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Flowing_Water_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_GrenadeLauncher_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_GrenadeLauncher_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Grenade_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Grenade_Sticky_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_ImpactHammer_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_ImpactHammer_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LightningDOT_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LightningRifle_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LightningRifle_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LightningRifle_Proj_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LinkAlt_1P_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LinkAlt_3P_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LinkGun_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_LinkGun_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Link_Proj_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Minigun_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RallyDest_Blue_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RallyDest_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RallyDest_Red_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RallyEnd_blue_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RallyEnd_Red_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RocketGrenade_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RocketLauncher_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_RocketSeeking_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Rocket_Attachment_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Rocket_Projectile_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Sniper_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_Sniper_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_UTDmg_LightningHeadshot_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BP_UTDmg_SniperHeadshot_functions.cpp" />
+    <ClCompile Include="SDK\UT4_BuildPatchServices_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CableComponent_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ChainLightningMessage_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CinematicCamera_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CloseFlakRewardMessage_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ComboExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ComboVortex_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CoreUObject_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CorsairRGB_functions.cpp" />
+    <ClCompile Include="SDK\UT4_CustomMeshComponent_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Default_functions.cpp" />
+    <ClCompile Include="SDK\UT4_DmgTypeBP_Environmental_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Dmg_FallingCrush_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Dual_Enforcer_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_EnforcerImpactEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Enforcer_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Enforcer_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Enforcer_Attach_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Enforcer_functions.cpp" />
+    <ClCompile Include="SDK\UT4_EngineMessages_functions.cpp" />
+    <ClCompile Include="SDK\UT4_EngineSettings_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Engine_functions.cpp" />
+    <ClCompile Include="SDK\UT4_FacialAnimation_functions.cpp" />
+    <ClCompile Include="SDK\UT4_FlakShellExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_FlakShell_Shard_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Flak_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Flak_Cannon_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Flak_Shard_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Flak_Shard_Main_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Flak_Shell_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Foliage_functions.cpp" />
+    <ClCompile Include="SDK\UT4_FX_GrenadeExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_FX_RocketExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GameLiveStreaming_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GameplayTags_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GameplayTasks_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GameSpeedMutatorMenu_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GameSubCatalog_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GeometryCache_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanArmL_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanArmR_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanBase_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanHead_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanLegL_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanLegR_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanRibs_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GibHumanTorso_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GrenadeDetonateIndicator_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GrenadeExplodeBig_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GrenadeExplode_Sticky_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Grenade_Launcher_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_GroupTaunt_FacePalm_functions.cpp" />
+    <ClCompile Include="SDK\UT4_HeadMountedDisplay_functions.cpp" />
+    <ClCompile Include="SDK\UT4_HeadShotMessage_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Hotfix_functions.cpp" />
+    <ClCompile Include="SDK\UT4_HTML5Networking_functions.cpp" />
+    <ClCompile Include="SDK\UT4_HumanMaleBase_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ImpactHammerReward_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ImpactHammerShieldProj_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Impact_Hammer_1p_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_InputCore_functions.cpp" />
+    <ClCompile Include="SDK\UT4_JsonUtilities_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Landscape_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LightningHitEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LightningHitEffect_Proj_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Lightning_Gun_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LightPropagationVolumeRuntime_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LineUpVisualizationCharacter_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LineUpZone_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LinkBeamImpactEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LinkGun_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LinkGun_Anim_BP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_LinkPrimaryHitEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Lobby_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Malcolm_New_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MaterialShaderQualitySettings_functions.cpp" />
+    <ClCompile Include="SDK\UT4_McpProfileSys_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MediaAssets_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MinigunProjImpactEffectRadial_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MiniGun_1p_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Minigun_Attachment_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Minigun_ProjectileNew_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MobilePatchingUtils_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MonsterHealthDropMedium_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MoviePlayer_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MovieSceneTracks_functions.cpp" />
+    <ClCompile Include="SDK\UT4_MovieScene_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Mutator_WeaponReplacementUI_Base_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Mutator_WeaponReplacementUI_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Mutator_WeaponReplacementUI_Replacement_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Niagara_functions.cpp" />
+    <ClCompile Include="SDK\UT4_OnlineSubsystemUtils_functions.cpp" />
+    <ClCompile Include="SDK\UT4_OnlineSubsystem_functions.cpp" />
+    <ClCompile Include="SDK\UT4_PacketHandler_functions.cpp" />
+    <ClCompile Include="SDK\UT4_PancakeReward_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Party_functions.cpp" />
+    <ClCompile Include="SDK\UT4_PhysXVehicles_functions.cpp" />
+    <ClCompile Include="SDK\UT4_PlayerPreviewEnvironment_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ProceduralMeshComponent_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Qos_functions.cpp" />
+    <ClCompile Include="SDK\UT4_RazerChroma_functions.cpp" />
+    <ClCompile Include="SDK\UT4_RedTeleportEffect_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Rejoin_functions.cpp" />
+    <ClCompile Include="SDK\UT4_RewardAnnouncerMale_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Rocket_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Rocket_Launcher_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SampleGameMode_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Serialization_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SessionMessages_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ShockAttachment_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ShockBallExplosion_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ShockBall_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ShockBeamImpact_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ShockRifle_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Shock_AnimBP_1p_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Shock_Rifle_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SK_WP_Impact_1P_AnimBlueprint_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SK_WP_RocketLauncher_3P_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SK_WP_Stinger_1P_Skeleton_AnimBlueprint_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SlateCore_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Slate_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SniperAnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_SniperBulletImpact_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Sniper_Rifle_1p_animBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Social_functions.cpp" />
+    <ClCompile Include="SDK\UT4_StingerImpact_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Taunt_Boom_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Taunt_Bow_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Taunt_Clawpose_functions.cpp" />
+    <ClCompile Include="SDK\UT4_TcpMessaging_functions.cpp" />
+    <ClCompile Include="SDK\UT4_TextStyle-Base_functions.cpp" />
+    <ClCompile Include="SDK\UT4_TextStyle-Body_functions.cpp" />
+    <ClCompile Include="SDK\UT4_ThundercrashVoice_functions.cpp" />
+    <ClCompile Include="SDK\UT4_TutMainMenuWidget_functions.cpp" />
+    <ClCompile Include="SDK\UT4_TutTrainingInfoBox_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UdpMessaging_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UMG_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UnrealTournament_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UT-Entry_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UT4_Base_AnimBP_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Enforcer_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_FlakShard_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_FlakShell_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_GrenadeLauncher_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_GrenadeLauncher_Sticky_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_ImpactHammerBlock_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_ImpactHammer_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_LightningBeamChain_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_LightningBeam_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_LightningProj_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Link_AltPulse_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Link_Alt_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Link_Primary_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Minigun_Alt_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Minigun_Primary_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDMG_Rocket_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_ShockBeam_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_ShockCombo_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_ShockCore_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTDmg_Sniper_functions.cpp" />
+    <ClCompile Include="SDK\UT4_UTMcpProfile_functions.cpp" />
+    <ClCompile Include="SDK\UT4_VectorVM_functions.cpp" />
+    <ClCompile Include="SDK\UT4_Vivox_functions.cpp" />
+    <ClCompile Include="SDK\UT4_WeaponIDs_functions.cpp" />
+    <ClCompile Include="SDK\UT4_WebBrowser_functions.cpp" />
+    <ClCompile Include="SDK\UT4_WebMRecord_functions.cpp" />
+    <ClCompile Include="SDK\UT4_WmfMediaFactory_functions.cpp" />
+    <ClCompile Include="SDK\UT4_YoinkMessage_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="detours\detour.h" />
+    <ClInclude Include="detours\exception_detour.h" />
+    <ClInclude Include="detours\game\draw_hud_detour.h" />
+    <ClInclude Include="detours\game\tick_detour.h" />
+    <ClInclude Include="detours\hwbp_detour.h" />
+    <ClInclude Include="detours\trampoline_detour.h" />
+    <ClInclude Include="detours\vmt_detour.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="manager.h" />
+    <ClInclude Include="modules\aimbot.h" />
+    <ClInclude Include="modules\esp.h" />
+    <ClInclude Include="modules\module.h" />
+    <ClInclude Include="SDK.hpp" />
+    <ClInclude Include="SDK\UT4_AIModule_classes.hpp" />
+    <ClInclude Include="SDK\UT4_AIModule_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_AIModule_structs.hpp" />
+    <ClInclude Include="SDK\UT4_AirRocketReward_classes.hpp" />
+    <ClInclude Include="SDK\UT4_AirRocketReward_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_AirRocketReward_structs.hpp" />
+    <ClInclude Include="SDK\UT4_AnimGraphRuntime_classes.hpp" />
+    <ClInclude Include="SDK\UT4_AnimGraphRuntime_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_AnimGraphRuntime_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ArchVisCharacter_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ArchVisCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ArchVisCharacter_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ArenaMutatorMenu_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ArenaMutatorMenu_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ArenaMutatorMenu_structs.hpp" />
+    <ClInclude Include="SDK\UT4_AwesomComboReward_classes.hpp" />
+    <ClInclude Include="SDK\UT4_AwesomComboReward_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_AwesomComboReward_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BaseCharacterBloodExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BaseCharacterBloodExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BaseCharacterBloodExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTCharacter_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTCharacter_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTVoice_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTVoice_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BaseUTVoice_structs.hpp" />
+    <ClInclude Include="SDK\UT4_base_1p_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_base_1p_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_base_1p_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Base_3p_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Base_3p_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Base_3p_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Basic.hpp" />
+    <ClInclude Include="SDK\UT4_BioRifle_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BioRifle_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BioRifle_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BlueprintContext_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BlueprintContext_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BlueprintContext_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BlueTeleportEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BlueTeleportEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BlueTeleportEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlagSplineCreator_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlagSplineCreator_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlagSplineCreator_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlakCannon_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlakCannon_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_FlakCannon_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flak_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flak_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flak_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flowing_Water_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flowing_Water_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Flowing_Water_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_GrenadeLauncher_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_Sticky_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_Sticky_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_Sticky_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Grenade_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_ImpactHammer_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningDOT_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningDOT_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningDOT_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Proj_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Proj_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_Proj_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LightningRifle_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_1P_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_1P_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_1P_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_3P_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_3P_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkAlt_3P_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_LinkGun_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Link_Proj_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Link_Proj_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Link_Proj_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Minigun_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Minigun_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Minigun_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Blue_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Blue_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Blue_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Red_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Red_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_Red_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyDest_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_blue_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_blue_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_blue_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_Red_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_Red_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RallyEnd_Red_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketGrenade_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketGrenade_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketGrenade_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketLauncher_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketLauncher_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketLauncher_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketSeeking_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketSeeking_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_RocketSeeking_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Attachment_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Attachment_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Attachment_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Projectile_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Projectile_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Rocket_Projectile_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_Sniper_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_LightningHeadshot_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_LightningHeadshot_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_LightningHeadshot_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_SniperHeadshot_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_SniperHeadshot_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BP_UTDmg_SniperHeadshot_structs.hpp" />
+    <ClInclude Include="SDK\UT4_BuildPatchServices_classes.hpp" />
+    <ClInclude Include="SDK\UT4_BuildPatchServices_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_BuildPatchServices_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CableComponent_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CableComponent_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CableComponent_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ChainLightningMessage_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ChainLightningMessage_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ChainLightningMessage_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CinematicCamera_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CinematicCamera_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CinematicCamera_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CloseFlakRewardMessage_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CloseFlakRewardMessage_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CloseFlakRewardMessage_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ComboExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ComboExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ComboExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ComboVortex_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ComboVortex_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ComboVortex_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CoreUObject_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CoreUObject_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CoreUObject_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CorsairRGB_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CorsairRGB_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CorsairRGB_structs.hpp" />
+    <ClInclude Include="SDK\UT4_CustomMeshComponent_classes.hpp" />
+    <ClInclude Include="SDK\UT4_CustomMeshComponent_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_CustomMeshComponent_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Default_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Default_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Default_structs.hpp" />
+    <ClInclude Include="SDK\UT4_DmgTypeBP_Environmental_classes.hpp" />
+    <ClInclude Include="SDK\UT4_DmgTypeBP_Environmental_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_DmgTypeBP_Environmental_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Dmg_FallingCrush_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Dmg_FallingCrush_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Dmg_FallingCrush_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Dual_Enforcer_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Dual_Enforcer_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Dual_Enforcer_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_EnforcerImpactEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_EnforcerImpactEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_EnforcerImpactEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_Attach_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_Attach_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_Attach_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Enforcer_structs.hpp" />
+    <ClInclude Include="SDK\UT4_EngineMessages_classes.hpp" />
+    <ClInclude Include="SDK\UT4_EngineMessages_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_EngineMessages_structs.hpp" />
+    <ClInclude Include="SDK\UT4_EngineSettings_classes.hpp" />
+    <ClInclude Include="SDK\UT4_EngineSettings_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_EngineSettings_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Engine_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Engine_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Engine_structs.hpp" />
+    <ClInclude Include="SDK\UT4_FacialAnimation_classes.hpp" />
+    <ClInclude Include="SDK\UT4_FacialAnimation_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_FacialAnimation_structs.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShellExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShellExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShellExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShell_Shard_classes.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShell_Shard_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_FlakShell_Shard_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Cannon_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Cannon_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Cannon_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_Main_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_Main_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_Main_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shard_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shell_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shell_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Flak_Shell_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Foliage_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Foliage_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Foliage_structs.hpp" />
+    <ClInclude Include="SDK\UT4_FX_GrenadeExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_FX_GrenadeExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_FX_GrenadeExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_FX_RocketExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_FX_RocketExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_FX_RocketExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GameLiveStreaming_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GameLiveStreaming_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GameLiveStreaming_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTags_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTags_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTags_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTasks_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTasks_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GameplayTasks_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GameSpeedMutatorMenu_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GameSpeedMutatorMenu_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GameSpeedMutatorMenu_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GameSubCatalog_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GameSubCatalog_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GameSubCatalog_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GeometryCache_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GeometryCache_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GeometryCache_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmL_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmL_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmL_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmR_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmR_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanArmR_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanBase_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanBase_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanBase_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanHead_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanHead_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanHead_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegL_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegL_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegL_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegR_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegR_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanLegR_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanRibs_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanRibs_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanRibs_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanTorso_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanTorso_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GibHumanTorso_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeDetonateIndicator_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeDetonateIndicator_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeDetonateIndicator_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplodeBig_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplodeBig_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplodeBig_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplode_Sticky_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplode_Sticky_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GrenadeExplode_Sticky_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Grenade_Launcher_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Grenade_Launcher_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Grenade_Launcher_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_GroupTaunt_FacePalm_classes.hpp" />
+    <ClInclude Include="SDK\UT4_GroupTaunt_FacePalm_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_GroupTaunt_FacePalm_structs.hpp" />
+    <ClInclude Include="SDK\UT4_HeadMountedDisplay_classes.hpp" />
+    <ClInclude Include="SDK\UT4_HeadMountedDisplay_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_HeadMountedDisplay_structs.hpp" />
+    <ClInclude Include="SDK\UT4_HeadShotMessage_classes.hpp" />
+    <ClInclude Include="SDK\UT4_HeadShotMessage_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_HeadShotMessage_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Hotfix_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Hotfix_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Hotfix_structs.hpp" />
+    <ClInclude Include="SDK\UT4_HTML5Networking_classes.hpp" />
+    <ClInclude Include="SDK\UT4_HTML5Networking_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_HTML5Networking_structs.hpp" />
+    <ClInclude Include="SDK\UT4_HumanMaleBase_classes.hpp" />
+    <ClInclude Include="SDK\UT4_HumanMaleBase_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_HumanMaleBase_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerReward_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerReward_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerReward_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerShieldProj_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerShieldProj_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ImpactHammerShieldProj_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Impact_Hammer_1p_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Impact_Hammer_1p_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Impact_Hammer_1p_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_InputCore_classes.hpp" />
+    <ClInclude Include="SDK\UT4_InputCore_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_InputCore_structs.hpp" />
+    <ClInclude Include="SDK\UT4_JsonUtilities_classes.hpp" />
+    <ClInclude Include="SDK\UT4_JsonUtilities_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_JsonUtilities_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Landscape_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Landscape_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Landscape_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_Proj_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_Proj_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_Proj_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LightningHitEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Lightning_Gun_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Lightning_Gun_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Lightning_Gun_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LightPropagationVolumeRuntime_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LightPropagationVolumeRuntime_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LightPropagationVolumeRuntime_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpVisualizationCharacter_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpVisualizationCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpVisualizationCharacter_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpZone_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpZone_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LineUpZone_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LinkBeamImpactEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LinkBeamImpactEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LinkBeamImpactEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_Anim_BP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_Anim_BP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LinkGun_Anim_BP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_LinkPrimaryHitEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_LinkPrimaryHitEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_LinkPrimaryHitEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Lobby_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Lobby_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Lobby_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Malcolm_New_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Malcolm_New_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Malcolm_New_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MaterialShaderQualitySettings_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MaterialShaderQualitySettings_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MaterialShaderQualitySettings_structs.hpp" />
+    <ClInclude Include="SDK\UT4_McpProfileSys_classes.hpp" />
+    <ClInclude Include="SDK\UT4_McpProfileSys_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_McpProfileSys_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MediaAssets_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MediaAssets_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MediaAssets_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MinigunProjImpactEffectRadial_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MinigunProjImpactEffectRadial_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MinigunProjImpactEffectRadial_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MiniGun_1p_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MiniGun_1p_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MiniGun_1p_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_Attachment_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_Attachment_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_Attachment_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_ProjectileNew_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_ProjectileNew_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Minigun_ProjectileNew_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MobilePatchingUtils_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MobilePatchingUtils_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MobilePatchingUtils_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MonsterHealthDropMedium_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MonsterHealthDropMedium_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MonsterHealthDropMedium_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MoviePlayer_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MoviePlayer_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MoviePlayer_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MovieSceneTracks_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MovieSceneTracks_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MovieSceneTracks_structs.hpp" />
+    <ClInclude Include="SDK\UT4_MovieScene_classes.hpp" />
+    <ClInclude Include="SDK\UT4_MovieScene_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_MovieScene_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Base_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Base_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Base_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Replacement_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Replacement_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_Replacement_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Mutator_WeaponReplacementUI_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Niagara_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Niagara_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Niagara_structs.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystemUtils_classes.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystemUtils_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystemUtils_structs.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystem_classes.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystem_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_OnlineSubsystem_structs.hpp" />
+    <ClInclude Include="SDK\UT4_PacketHandler_classes.hpp" />
+    <ClInclude Include="SDK\UT4_PacketHandler_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_PacketHandler_structs.hpp" />
+    <ClInclude Include="SDK\UT4_PancakeReward_classes.hpp" />
+    <ClInclude Include="SDK\UT4_PancakeReward_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_PancakeReward_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Party_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Party_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Party_structs.hpp" />
+    <ClInclude Include="SDK\UT4_PhysXVehicles_classes.hpp" />
+    <ClInclude Include="SDK\UT4_PhysXVehicles_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_PhysXVehicles_structs.hpp" />
+    <ClInclude Include="SDK\UT4_PlayerPreviewEnvironment_classes.hpp" />
+    <ClInclude Include="SDK\UT4_PlayerPreviewEnvironment_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_PlayerPreviewEnvironment_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ProceduralMeshComponent_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ProceduralMeshComponent_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ProceduralMeshComponent_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Qos_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Qos_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Qos_structs.hpp" />
+    <ClInclude Include="SDK\UT4_RazerChroma_classes.hpp" />
+    <ClInclude Include="SDK\UT4_RazerChroma_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_RazerChroma_structs.hpp" />
+    <ClInclude Include="SDK\UT4_RedTeleportEffect_classes.hpp" />
+    <ClInclude Include="SDK\UT4_RedTeleportEffect_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_RedTeleportEffect_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Rejoin_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Rejoin_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Rejoin_structs.hpp" />
+    <ClInclude Include="SDK\UT4_RewardAnnouncerMale_classes.hpp" />
+    <ClInclude Include="SDK\UT4_RewardAnnouncerMale_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_RewardAnnouncerMale_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_Launcher_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_Launcher_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Rocket_Launcher_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SampleGameMode_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SampleGameMode_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SampleGameMode_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Serialization_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Serialization_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Serialization_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SessionMessages_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SessionMessages_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SessionMessages_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ShockAttachment_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ShockAttachment_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ShockAttachment_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBallExplosion_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBallExplosion_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBallExplosion_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBall_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBall_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBall_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBeamImpact_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBeamImpact_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ShockBeamImpact_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ShockRifle_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ShockRifle_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ShockRifle_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_AnimBP_1p_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_AnimBP_1p_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_AnimBP_1p_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_Rifle_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_Rifle_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Shock_Rifle_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Impact_1P_AnimBlueprint_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Impact_1P_AnimBlueprint_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Impact_1P_AnimBlueprint_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_RocketLauncher_3P_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_RocketLauncher_3P_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_RocketLauncher_3P_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Stinger_1P_Skeleton_AnimBlueprint_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Stinger_1P_Skeleton_AnimBlueprint_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SK_WP_Stinger_1P_Skeleton_AnimBlueprint_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SlateCore_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SlateCore_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SlateCore_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Slate_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Slate_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Slate_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SniperAnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SniperAnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SniperAnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_SniperBulletImpact_classes.hpp" />
+    <ClInclude Include="SDK\UT4_SniperBulletImpact_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_SniperBulletImpact_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Sniper_Rifle_1p_animBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Sniper_Rifle_1p_animBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Sniper_Rifle_1p_animBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Social_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Social_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Social_structs.hpp" />
+    <ClInclude Include="SDK\UT4_StingerImpact_classes.hpp" />
+    <ClInclude Include="SDK\UT4_StingerImpact_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_StingerImpact_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Boom_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Boom_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Boom_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Bow_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Bow_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Bow_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Clawpose_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Clawpose_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Taunt_Clawpose_structs.hpp" />
+    <ClInclude Include="SDK\UT4_TcpMessaging_classes.hpp" />
+    <ClInclude Include="SDK\UT4_TcpMessaging_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_TcpMessaging_structs.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Base_classes.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Base_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Base_structs.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Body_classes.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Body_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_TextStyle-Body_structs.hpp" />
+    <ClInclude Include="SDK\UT4_ThundercrashVoice_classes.hpp" />
+    <ClInclude Include="SDK\UT4_ThundercrashVoice_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_ThundercrashVoice_structs.hpp" />
+    <ClInclude Include="SDK\UT4_TutMainMenuWidget_classes.hpp" />
+    <ClInclude Include="SDK\UT4_TutMainMenuWidget_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_TutMainMenuWidget_structs.hpp" />
+    <ClInclude Include="SDK\UT4_TutTrainingInfoBox_classes.hpp" />
+    <ClInclude Include="SDK\UT4_TutTrainingInfoBox_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_TutTrainingInfoBox_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UdpMessaging_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UdpMessaging_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UdpMessaging_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UMG_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UMG_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UMG_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UnrealTournament_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UnrealTournament_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UnrealTournament_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UT-Entry_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UT-Entry_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UT-Entry_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UT4_Base_AnimBP_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UT4_Base_AnimBP_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UT4_Base_AnimBP_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Enforcer_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Enforcer_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Enforcer_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShard_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShard_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShard_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShell_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShell_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_FlakShell_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_Sticky_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_Sticky_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_Sticky_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_GrenadeLauncher_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammerBlock_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammerBlock_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammerBlock_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammer_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammer_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ImpactHammer_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeamChain_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeamChain_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeamChain_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeam_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeam_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningBeam_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningProj_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningProj_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_LightningProj_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_AltPulse_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_AltPulse_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_AltPulse_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Alt_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Alt_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Alt_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Primary_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Primary_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Link_Primary_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Alt_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Alt_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Alt_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Primary_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Primary_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Minigun_Primary_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Rocket_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Rocket_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDMG_Rocket_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockBeam_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockBeam_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockBeam_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCombo_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCombo_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCombo_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCore_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCore_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_ShockCore_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_Sniper_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_Sniper_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTDmg_Sniper_structs.hpp" />
+    <ClInclude Include="SDK\UT4_UTMcpProfile_classes.hpp" />
+    <ClInclude Include="SDK\UT4_UTMcpProfile_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_UTMcpProfile_structs.hpp" />
+    <ClInclude Include="SDK\UT4_VectorVM_classes.hpp" />
+    <ClInclude Include="SDK\UT4_VectorVM_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_VectorVM_structs.hpp" />
+    <ClInclude Include="SDK\UT4_Vivox_classes.hpp" />
+    <ClInclude Include="SDK\UT4_Vivox_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_Vivox_structs.hpp" />
+    <ClInclude Include="SDK\UT4_WeaponIDs_classes.hpp" />
+    <ClInclude Include="SDK\UT4_WeaponIDs_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_WeaponIDs_structs.hpp" />
+    <ClInclude Include="SDK\UT4_WebBrowser_classes.hpp" />
+    <ClInclude Include="SDK\UT4_WebBrowser_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_WebBrowser_structs.hpp" />
+    <ClInclude Include="SDK\UT4_WebMRecord_classes.hpp" />
+    <ClInclude Include="SDK\UT4_WebMRecord_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_WebMRecord_structs.hpp" />
+    <ClInclude Include="SDK\UT4_WmfMediaFactory_classes.hpp" />
+    <ClInclude Include="SDK\UT4_WmfMediaFactory_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_WmfMediaFactory_structs.hpp" />
+    <ClInclude Include="SDK\UT4_YoinkMessage_classes.hpp" />
+    <ClInclude Include="SDK\UT4_YoinkMessage_parameters.hpp" />
+    <ClInclude Include="SDK\UT4_YoinkMessage_structs.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
